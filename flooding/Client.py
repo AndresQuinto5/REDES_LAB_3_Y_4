@@ -9,9 +9,9 @@ class Client(slixmpp.ClientXMPP):
         This class allows users to chat with other users and login
 
         Arguments:
-            jid -- the jid of the user using the following format:[name]@alumchat.xyz
+            jid -- the jid of the user using the following format:[name]@alumchat.fun
             passowrd -- the password associated to the said user
-            recipient --the jid of the recipient using the following format: [name]@alumchat.xyz
+            recipient --the jid of the recipient using the following format: [name]@alumchat.fun
             message -- the message to send
             routing -- the type of routing to use
             listening -- a boolean that indicates if the user is sending a message or just listening
