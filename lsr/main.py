@@ -7,7 +7,7 @@ Andres Quinto 19288
 '''
 
 from getpass import getpass
-from dvr.lsr import LRS, LSR
+from lsr import LRS, LSR
 from lsr import *
 
 #Main
