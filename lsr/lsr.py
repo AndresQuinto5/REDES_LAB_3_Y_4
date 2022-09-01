@@ -8,7 +8,7 @@ Andres Quinto 19288
 import slixmpp
 
 class LSR(slixmpp.ClientXMPP):
-    def __init__(jid, password,topolo,name):
+    def __init__(self, jid, password,topolo,name):
         slixmpp.ClientXMPP.__init__(self, jid, password)
         self.add_event_handler("session_start", self.start)
         self.add_event_handler("message", self.message)
