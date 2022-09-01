@@ -1,3 +1,11 @@
+'''
+Laboratorio 3 - Algoritmos de enrutamiento
+
+Mirka Monzon 18139
+Oscar De Leon 19298
+Andres Quinto 19288
+'''
+
 from Client import Client
 from aioconsole import ainput
 import networkx as nx
