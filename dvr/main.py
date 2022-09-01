@@ -41,7 +41,7 @@ def obtenerGrafico(topologia, nombres, usuario):
     origen = None
 
     for key, value in topologia['config'].items():
-        graph.key = {}
+        graph[key] = {}
         for nodo in value:
             graph[key][nodo] = float('inf')
             if nombres['config'][nodo] == usuario:
@@ -126,7 +126,7 @@ if __name__ == "__main__":
     
     opts, args = optp.parse_args()
 
-    topo, names = cargarConfiguracion()
+    topologia, nombres = cargarConfiguracion()
     if opts.jid is None:
         opts.jid = input("Escriba su JID: ")
     if opts.password is None:
@@ -139,13 +139,13 @@ if __name__ == "__main__":
         """)
         opts.algoritmo = input("Escriba el numero de algoritmo a utilizar: ")
 
-    graph_dict, source = obtenerGrafico(topo, names, user=opts.jid)
+    graph_dict, source = obtenerGrafico(topologia, nombres, opts.jid)
 
-    nodo, nodes = obtenerNodos(topo, names, opts.jid)
+    nodo, nodos = obtenerNodos(topologia, nombres, opts.jid)
 
-    graph = pruebaGrafo(topo, names)
+    graph = pruebaGrafo(topologia, nombres)
 
-    xmpp = Client(opts.jid, opts.password, opts.algoritmo, nodo, nodes, names["config"], graph, graph_dict, source)
+    xmpp = Client(opts.jid, opts.password, opts.algoritmo, nodo, nodos, nombres["config"], graph, graph_dict, source)
     xmpp.connect() 
     xmpp.loop.run_until_complete(xmpp.connected_event.wait())
     xmpp.loop.create_task(main(xmpp))

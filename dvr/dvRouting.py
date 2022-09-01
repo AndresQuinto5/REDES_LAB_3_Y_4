@@ -18,7 +18,7 @@ class DVR():
 
         self.graph = graph
         self.graph_directorio = graph_directorio
-        self.fuente = origen
+        self.origen = origen
         self.distancia, self.predecesor = self.bellmanFord(graph_directorio, origen)
         self.nombres = nombres
         self.vecinos = self.obtenerVecinos(graph_directorio, origen)
@@ -71,7 +71,7 @@ class DVR():
                 nueva_grafica[i][j] = graph_directorio[i][j]['weight']
         self.graph_directorio = nueva_grafica
         self.distancia, self.predecesor = self.bellmanFord(nueva_grafica, self.origen)
-        self.vecinos = self.obtenerVecinos(nueva_grafica, self.fuente)
+        self.vecinos = self.obtenerVecinos(nueva_grafica, self.origen)
     
 
     # Se realiza la busqueda del camino mas corto

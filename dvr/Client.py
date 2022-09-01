@@ -24,7 +24,7 @@ class Client(slixmpp.ClientXMPP):
         self.nombres = nombres
         self.graph = graph
         
-        self.dvr = DVR(graph, graph_directorio, origen)
+        self.dvr = DVR(graph, graph_directorio, origen, nombres)
 
         self.nodo = nodo
         self.nodos = nodos
