@@ -35,6 +35,7 @@ if __name__ == '__main__':
             message = input("Write a message! : ")
 
         xmpp = Client(jid, password, recipient, message, routing, listening, names_file, topology_file)
+        #U CAN CHECK THE PLUGINS HERE: https://xmpp.org/extensions/
         xmpp.register_plugin('xep_0030') # Service Discovery
         xmpp.register_plugin('xep_0199') # XMPP Ping
         xmpp.register_plugin('xep_0045') # Mulit-User Chat (MUC)
