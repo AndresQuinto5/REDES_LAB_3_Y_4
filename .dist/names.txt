@@ -1,0 +1,1 @@
+{"type":"names", "config":{'A': 'qui18288@alumchat.fun', 'B': 'qui18288_1@alumchat.fun', 'C': 'qui18288_2@alumchat.fun', 'D': 'qui18288_3@alumchat.fun', 'E': 'qui18288_4@alumchat.fun', 'F': 'qui18288_5@alumchat.fun', 'G': 'qui18288_6@alumchat.fun', 'H': 'qui18288_7@alumchat.fun', 'I': 'qui18288_8@alumchat.fun'} }
