@@ -118,19 +118,19 @@ if __name__ == "__main__":
 
     optp = OptionParser()
     optp.add_option("-j", "--jid", dest="jid",
-                    help="JID to use")
+                    help="JID a utilizar")
     optp.add_option("-p", "--password", dest="password",
-                    help="password to use")
+                    help="contrasenia a utilizar")
     optp.add_option("-a", "--algoritmo", dest="algoritmo",
-                    help="algoritmo to use")
+                    help="algoritmo a utilizar")
     
     opts, args = optp.parse_args()
 
     topo, names = cargarConfiguracion()
     if opts.jid is None:
-        opts.jid = input("Type your JID: ")
+        opts.jid = input("TEscriba su JID: ")
     if opts.password is None:
-        opts.password = getpass.getpass("Type your passowrd: ")
+        opts.password = getpass.getpass("Escriba su contrasenia: ")
     if opts.algoritmo is None:
         print("""Algorithms Implemented:
         
