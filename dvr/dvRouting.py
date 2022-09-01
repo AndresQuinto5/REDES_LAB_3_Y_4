@@ -11,6 +11,8 @@ import genericpath
 from select import select
 import networkx as nx
 
+
+# Se inicializa la clase DVR
 class DVR():
     def __init__(self, graph, graph_directorio, origen, nombres):
 
@@ -22,6 +24,7 @@ class DVR():
         self.vecinos = self.obtenerVecinos(graph_directorio, origen)
 
 
+    # Inicializacion 
     def inicializacion(self, graph_directorio, origen):
 
         a = {}
@@ -35,6 +38,7 @@ class DVR():
         return a, b
 
 
+    # Implementacion de relax
     def relajacion(self, nodo, vecino, graph_directorio, a, b):
 
         if a[vecino] > a[nodo] + graph_directorio[nodo][vecino]:
@@ -42,11 +46,12 @@ class DVR():
             b[vecino] = nodo
         
 
+    # Se obtienen los vecinos
     def obtenerVecinos(self, graph_directorio, origen):
 
         return list(graph_directorio[origen].keys())
 
-
+    # Algoritmo de Bellman-Ford 
     def bellmanFord(self, graph_directorio, origen):
 
         a, b = self.inicializacion(graph_directorio, origen)
@@ -55,7 +60,7 @@ class DVR():
                 for k in graph_directorio[j]:
                     self.relajacion(j, k, graph_directorio, a, b)
 
-
+    # Se realiza la actualizacion de la grafica
     def actualizacion(self, graph_directorio):
 
         nueva_grafica = {}
@@ -69,6 +74,7 @@ class DVR():
         self.vecinos = self.obtenerVecinos(nueva_grafica, self.fuente)
     
 
+    # Se realiza la busqueda del camino mas corto
     def caminoCorto(self, objetivo):
         for i in self.nombres:
             if self.nombres[i] == objetivo:
