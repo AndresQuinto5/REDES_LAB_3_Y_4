@@ -7,8 +7,7 @@ Andres Quinto 19288
 '''
 
 from getpass import getpass
-from lsr import LRS, LSR
-from lsr import *
+from lsr import LSR
 
 #Main
 if __name__ == '__main__':
