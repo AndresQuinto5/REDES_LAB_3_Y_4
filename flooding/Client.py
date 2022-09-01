@@ -6,17 +6,15 @@ from slixmpp.exceptions import IqError, IqTimeout
 
 class Client(slixmpp.ClientXMPP):
     """
-        This class allows users to chat with other users and login
-
-        Arguments:
-            jid -- the jid of the user using the following format:[name]@alumchat.fun
-            passowrd -- the password associated to the said user
-            recipient --the jid of the recipient using the following format: [name]@alumchat.fun
-            message -- the message to send
-            routing -- the type of routing to use
-            listening -- a boolean that indicates if the user is sending a message or just listening
-            names_file -- the filename of the file with the name-node associations
-            topology_file -- the filename of the file with the node-node associations
+        Class to chat w other users
+            ID
+            PASSWORD
+            reciever
+            msg
+            routing - algorithm to use
+            listening - if the user is sending a message or just listening
+            names.txt - the id associated to the name of the node
+            topology.txt - the topology of the network
     """
     def __init__(self, jid, password, recipient, message, routing, listening, names_file, topology_file):
         slixmpp.ClientXMPP.__init__(self, jid, password)
@@ -36,10 +34,9 @@ class Client(slixmpp.ClientXMPP):
 
 
     """
-        Send presence and calculate the route based on the given parameters
-
+        calculate the route based on the given parameters
         Arguments:
-            event -- an empty dictionary
+        empty list of nodes
     """
     async def start(self, event):
         self.send_presence()
@@ -64,9 +61,8 @@ class Client(slixmpp.ClientXMPP):
     
     """
         Sign in with a given user
-
-        Arguments:
-            iq -- an empty dictionary
+            SIGN IN:
+            iq -> empty dictionary
     """
     def register(self, iq):
         iq = self.Iq()
@@ -88,10 +84,9 @@ class Client(slixmpp.ClientXMPP):
             self.disconnect()
 
     """
-        Print the route of the message and send it to each receiver
-
-        Arguments:
-            msg -- the message to send
+        the route of the message is pritned and sent to the reciever
+        
+        message -- the message to send
     """
     def message(self, msg):
         if(self.routing=="flooding"):
