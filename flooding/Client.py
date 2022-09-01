@@ -5,7 +5,7 @@ Mirka Monzon 18139
 Oscar De Leon 19298
 Andres Quinto 19288
 '''
-
+#We work with the client xampp server similar as the project 1
 import uuid
 import json
 import slixmpp
@@ -75,7 +75,8 @@ class Client(slixmpp.ClientXMPP):
     def register(self, iq):
         iq = self.Iq()
         iq['type'] = 'set'
-        iq['register']['username'] = self.boundjid.user
+        #THIS IS THE REGISTRATION INFORMATION
+        iq['register']['username'] = self.boundjid.user 
         iq['register']['password'] = self.password
 
         try:
