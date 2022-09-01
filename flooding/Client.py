@@ -13,17 +13,17 @@ from utils import calculate
 from slixmpp.exceptions import IqError, IqTimeout
 
 class Client(slixmpp.ClientXMPP):
-    """
-        Class to chat w other users
-            ID
-            PASSWORD
-            reciever
-            msg
-            routing - algorithm to use
-            listening - if the user is sending a message or just listening
-            names.txt - the id associated to the name of the node
-            topology.txt - the topology of the network
-    """
+    
+        # Class to chat w other users
+        #     ID
+        #     PASSWORD
+        #     reciever
+        #     msg
+        #     routing - algorithm to use
+        #     listening - if the user is sending a message or just listening
+        #     names.txt - the id associated to the name of the node
+        #     topology.txt - the topology of the network
+    
     def __init__(self, jid, password, recipient, message, routing, listening, names_file, topology_file):
         slixmpp.ClientXMPP.__init__(self, jid, password)
 
@@ -41,11 +41,11 @@ class Client(slixmpp.ClientXMPP):
         self.add_event_handler("register", self.register)
 
 
-    """
-        calculate the route based on the given parameters
-        Arguments:
-        empty list of nodes
-    """
+
+    #     calculate the route based on the given parameters
+    #     Arguments:
+    #     empty list of nodes
+
     async def start(self, event):
         self.send_presence()
         await self.get_roster()
@@ -67,11 +67,11 @@ class Client(slixmpp.ClientXMPP):
                 print("Message sent to :",receiver)
                 self.send_message(mto=receiver, mbody=message, mtype='chat')
     
-    """
-        Sign in with a given user
-            SIGN IN:
-            iq -> empty dictionary
-    """
+
+    #     Sign in with a given user
+    #         SIGN IN:
+    #         iq -> empty dictionary
+
     def register(self, iq):
         iq = self.Iq()
         iq['type'] = 'set'
@@ -92,11 +92,11 @@ class Client(slixmpp.ClientXMPP):
             print(e)
             self.disconnect()
 
-    """
-        the route of the message is pritned and sent to the reciever
+
+        # the route of the message is pritned and sent to the reciever
         
-        message -- the message to send
-    """
+        # message -- the message to send
+
     def message(self, msg):
         if(self.routing=="flooding"):
             if msg['type'] in ('chat'):

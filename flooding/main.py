@@ -15,8 +15,8 @@ if __name__ == '__main__':
 
     jid = input("Type your jid: ")
     password = getpass("Type your password: ")
-    routing = input("Routing type: ")
     print("anything else from flooding means listening")
+    routing = input("Routing type: ")
     
     listening = False
     if routing != "flooding":
@@ -45,4 +45,4 @@ if __name__ == '__main__':
         xmpp.process(forever=False)
         
     except KeyboardInterrupt as e:
-        print('\nThanks for using the flooding algorithm!\n')
+        print('\nThat was the flooding alg\n')
