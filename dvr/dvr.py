@@ -1,3 +1,11 @@
+'''
+Laboratorio 3 - Algoritmos de enrutamiento
+
+Mirka Monzon 18139
+Oscar De Leon 19298
+Andres Quinto 19288
+'''
+
 from cgitb import reset
 import genericpath
 from select import select
