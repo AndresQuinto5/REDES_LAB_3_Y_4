@@ -128,16 +128,16 @@ if __name__ == "__main__":
 
     topo, names = cargarConfiguracion()
     if opts.jid is None:
-        opts.jid = input("TEscriba su JID: ")
+        opts.jid = input("Escriba su JID: ")
     if opts.password is None:
         opts.password = getpass.getpass("Escriba su contrasenia: ")
     if opts.algoritmo is None:
-        print("""Algorithms Implemented:
+        print("""Algoritmos disponibles:
         
         1. Distance Vector Routing
         
         """)
-        opts.algoritmo = input("Type the number of the algorithm you want to use: ")
+        opts.algoritmo = input("Escriba el numero de algoritmo a utilizar: ")
 
     graph_dict, source = obtenerGrafico(topo, names, user=opts.jid)
 
