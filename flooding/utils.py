@@ -60,7 +60,7 @@ def get_neighbors(topology_file, names_file, JID):
 
 
 
-#CALCULATE THE ROUTE BASED ON THE GIVEN PARAMETERS FUNCTION
+#CALCULATE THE ROUTE BASED ON THE GIVEN PARAMETERS
 # returns a calculated route for the given parameters
 # uses : a message to send, the sender, the names file, the jason id
 
