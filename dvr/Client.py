@@ -1,4 +1,4 @@
-<<<<<<< Updated upstream
+
 '''
 Laboratorio 3 - Algoritmos de enrutamiento
 
@@ -7,18 +7,12 @@ Oscar De Leon 19298
 Andres Quinto 19288
 '''
 
-=======
-from email import message_from_binary_file
-from dvRouting import DVR as DVR
->>>>>>> Stashed changes
 import asyncio
-from atexit import register
-from http.client import METHOD_NOT_ALLOWED
-from unittest.mock import call
 import slixmpp
 import networkx as nx
 import ast
 from datetime import datetime
+from dvRouting import DVR as DVR
 
 
 # Inicializacion de clase Cliente
