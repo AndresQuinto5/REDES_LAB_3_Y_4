@@ -1,11 +1,16 @@
+'''
+Laboratorio 3 - Algoritmos de enrutamiento
+
+Mirka Monzon 18139
+Oscar De Leon 19298
+Andres Quinto 19288
+'''
+
 from getpass import getpass
 from lsr import *
 from lsr import LSRClient
 
-"""
-    Main class
-"""
-
+#main
 if __name__ == '__main__':
     print("\n--- Welcome to the Chat! ---\n")
     jid = input('Type your jid: ')
