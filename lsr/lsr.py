@@ -13,8 +13,8 @@ import slixmpp
 from getpass import getpass
 from aioconsole import ainput, aprint 
 import time
-from utils import *
-from utils import echo_send, echo_response, lsp, json_to_object, message_type, hello, object_to_json
+from .utils import *
+from .utils import echo_send, echo_response, lsp, json_to_object, message_type, hello, object_to_json
 
 ##LSR clinte
 class LSRClient(slixmpp.ClientXMPP):

@@ -7,11 +7,11 @@ Andres Quinto 19288
 '''
 
 from getpass import getpass
-from lsr import *
-from lsr import LSRClient
+from .lsr import *
+from .lsr import LSRClient
 
 #main
-if __name__ == '__main__':
+def main3():
     print("\n--- Welcome to the Chat! ---\n")
     jid = input('Type your jid: ')
     password = getpass('Type your password: ')

@@ -2,7 +2,7 @@ import getpass
 from optparse import OptionParser
 import yaml
 import networkx as nx
-from client import Client
+from .cliente import Cliente
 from aioconsole import ainput
 
 
@@ -54,7 +54,7 @@ def pruebaGrafo(topo, names):
     return G
     
 # Main
-async def main(xmpp: Client):
+async def main1a(xmpp: Cliente):
     corriendo = True
     while corriendo:
         print("""
@@ -102,10 +102,7 @@ async def main(xmpp: Client):
             pass
 
 
-if __name__ == "__main__":
-
-
-    # Parser
+def main1():
     optp = OptionParser()
     optp.add_option("-j", "--jid", dest="jid",
                     help="JID to use")
@@ -135,9 +132,9 @@ if __name__ == "__main__":
 
     graph = pruebaGrafo(topo, names)
 
-    xmpp = Client(opts.jid, opts.password, opts.algoritmo, nodo, nodes, names["config"], graph, graph_dict, source)
+    xmpp = Cliente(opts.jid, opts.password, opts.algoritmo, nodo, nodes, names["config"], graph, graph_dict, source)
     xmpp.connect() 
     xmpp.loop.run_until_complete(xmpp.connected_event.wait())
-    xmpp.loop.create_task(main(xmpp))
+    xmpp.loop.create_task(main1a(xmpp))
     xmpp.process(forever=False)
     

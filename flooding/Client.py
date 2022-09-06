@@ -9,7 +9,7 @@ Andres Quinto 19288
 import uuid
 import json
 import slixmpp
-from utils import calculate
+from .utils import calculate
 from slixmpp.exceptions import IqError, IqTimeout
 
 class Client(slixmpp.ClientXMPP):

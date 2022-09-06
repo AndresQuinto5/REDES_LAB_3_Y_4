@@ -7,11 +7,11 @@ Andres Quinto 19288
 '''
 # https://es.wikipedia.org/wiki/Inundaci%C3%B3n_de_red
 from getpass import getpass
-from Client import *
+from .Client import *
 
 #DEFINITION OF THE MAIN CLASS
 
-if __name__ == '__main__':
+def main2():
 
     jid = input("Type your jid: ")
     password = getpass("Type your password: ")
