@@ -14,7 +14,7 @@ No obstante, con el dinamismo con el que se espera que pueda funcionar el Intern
 -  Distance Vector Routing
 -  Link State Routing
 
-## Requerimientos
+## Requerimientos de instalacion
 Las herramientas usadas para el desarrollo y uso del programa fueron:
 ```sh
 Python 3.7+ #No probamos en otra version de python, solo en 3.7.0, asi que prueben con esta version para que sea estable
