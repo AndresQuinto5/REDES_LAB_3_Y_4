@@ -1,11 +1,15 @@
 # REDES_LAB_3_Y_4
 # Laboratorio 3 - Algoritmos de enrutamiento 
 
+## Antecedentes
+Conociendo a dónde enviar los mensajes para cualquier router se vuelve trivial el envío de mensajes. Únicamente es necesario conocer el destino final y se reenvía al vecino que puede proveer la mejor ruta al destino. Toda esa información es almacenada en las tablas de enrutamiento.
+No obstante, con el dinamismo con el que se espera que pueda funcionar el Internet es necesario que dichas tablas puedan actualizarse y acomodarse a cambios en la infraestructura. Los algoritmos con los que se actualizan estas tablas son conocidos como algoritmos de enrutamiento.
+
 ## Objetivos
 - Conocer los algoritmos de enrutamiento utilizados en las implementaciones actuales de Internet.
 - Comprender cómo funcionan las tablas de enrutamiento.
 
-## Algoritmos implementados
+## Algoritmos a implementar
 -  Flooding
 -  Distance Vector Routing
 -  Link State Routing
@@ -39,6 +43,7 @@ Puedes instalarlas usando el siguiente comando:
 pip install -r requirements.txt 
 ```
 
+### Nota
 puede que la libreria pkg_resources de problemas, es por eso que la tenemos comentada, si a ti no te da problema porfavor instalarla.
 
 Para ejecutar 
