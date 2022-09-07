@@ -40,3 +40,8 @@ pip install -r requirements.txt
 ```
 
 puede que la libreria pkg_resources de problemas, es por eso que la tenemos comentada, si a ti no te da problema porfavor instalarla.
+
+Para ejecutar 
+```sh
+py main.py
+```
