@@ -13,7 +13,7 @@
 ## Requerimientos
 Las herramientas usadas para el desarrollo y uso del programa fueron:
 ```sh
-Python 3.7+
+Python 3.7+ #No probamos en otra version de python, solo en 3.7.0, asi que prueben con esta version para que sea estable
 Slixmpp 1.7.1
 aioconsole 0.3.2
 aiodns 3.0.0
@@ -38,3 +38,5 @@ Puedes instalarlas usando el siguiente comando:
 ```sh
 pip install -r requirements.txt 
 ```
+
+puede que la libreria pkg_resources de problemas, es por eso que la tenemos comentada, si a ti no te da problema porfavor instalarla.
